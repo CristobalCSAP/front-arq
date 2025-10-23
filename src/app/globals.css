@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.player-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.controls button {
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.progress-bar-container {
+  flex-grow: 1;
+  height: 5px;
+  background-color: #ccc;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #007bff;
+  width: 0%; /* Will be controlled by JavaScript */
+}
+
