@@ -6,7 +6,7 @@ const MusicPlayer: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const API_BASE_URL = "http://localhost:4000";
+  const API_BASE_URL = "https://msa-musica.onrender.com";
 
   // Obtener canciones del microservicio
   useEffect(() => {
