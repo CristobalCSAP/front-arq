@@ -45,14 +45,14 @@ const MusicPlayer: React.FC = () => {
   const getSongTitle = (filename: string) => filename.replace(".mp3", "");
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div style={{ textAlign: "center", marginTop: "50px",color: "white", alignContent: "center"}}>
       <h2>Reproductor de música</h2>
 
       {songs.length > 0 ? (
         <>
           <p>Reproduciendo: {getSongTitle(songs[currentIndex])}</p>
 
-          <audio ref={audioRef} controls autoPlay style={{ marginLeft: "660px", marginTop: "10px",width: "500px" }}>
+          <audio ref={audioRef} controls autoPlay style={{ marginLeft: "70px", marginTop: "10px",width: "500px",}}>
             <source
               src={`${API_BASE_URL}/songs/${songs[currentIndex]}`}
               type="audio/mpeg"
